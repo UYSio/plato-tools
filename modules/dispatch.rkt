@@ -1,7 +1,6 @@
 #lang racket
 
-(require xml
-         web-server/private/mime-types)
+(require web-server/private/mime-types)
 
 (require "handlers/_import.rkt")
 
@@ -24,10 +23,7 @@
   (let* ([mime-type (detect-mime-type asset-path)]
         [base (base-from-mime-type mime-type)])
     (if (hash-has-key? lookup base)
-        ((hash-ref lookup base) mime-type)
+        ((hash-ref lookup base) mime-type content-root asset-path out-dir)
         (printf "No handler for ~a\n" mime-type)
         )
     ))
-
-;; (define safe (string-replace (get-relative-asset-path content-root asset-path) "/" "_")) ; TODO
-;; (write-html (get-filename out-dir safe) `(div (p ,safe)))
