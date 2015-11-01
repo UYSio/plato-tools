@@ -2,14 +2,15 @@
 (require xml)
 (require racket/include)
 
-(require (file "~/.plato.rkt"))
-(define locs (hash-ref plato-opts 'locs))
+(require (file "~/.plato/config.rkt"))
+(define asset-locations (hash-ref plato-opts 'asset-locations))
+(define out-dir (hash-ref plato-opts 'out-dir))
 
 (define (something loc path)
   (define sub (string-replace (path->string path) loc ""))
   (define safe (string-replace sub "/" "_"))
   (define out (open-output-file
-               (format "out/data~a.html" safe)
+               (format "~a/data~a.html" out-dir safe)
                #:exists 'replace))
   (write-xexpr `(div
                  (p
@@ -25,7 +26,7 @@
       #f))
 
 ;; Finds Racket sources in all subdirs
-(for ([loc locs])
+(for ([loc asset-locations])
   (for ([path (in-directory loc)])
     (with-path-as-file loc path)
     ))
