@@ -9,16 +9,16 @@
 (define (detect-mime-type asset)
   (detector asset))
 
+(define (write-html out-dir file-name xexpr)
+  (define out (open-output-file
+               (format "~a/data~a.html" out-dir file-name)
+               #:exists 'replace))
+  (write-xexpr xexpr out)
+  (close-output-port out))
+
 ;; dispatches an asset based on mime-type
 (define (dispatch-asset content-root asset-path out-dir)
   (define sub (string-replace (path->string asset-path) content-root ""))
   (define safe (string-replace sub "/" "_"))
-  (define out (open-output-file
-               (format "~a/data~a.html" out-dir safe)
-               #:exists 'replace))
-  (write-xexpr `(div
-                 (p
-                  ,safe))
-               out)
-  (close-output-port out)
+  (write-html out-dir safe `(div (p ,safe)))
   (printf "~a has mime type ~a\n" asset-path (detect-mime-type asset-path)))
