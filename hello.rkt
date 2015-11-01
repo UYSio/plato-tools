@@ -1,5 +1,5 @@
 #lang racket
-(require xml/xexpr)
+(require xml)
 (require racket/include)
 
 (require (file "~/.plato.rkt"))
@@ -7,7 +7,16 @@
 
 (define (something loc path)
   (define sub (string-replace (path->string path) loc ""))
-  (printf "path: ~a\n" path))
+  (define safe (string-replace sub "/" "_"))
+  (define out (open-output-file
+               (format "out/data~a.html" safe)
+               #:exists 'replace))
+  (write-xexpr `(div
+                 (p
+                  ,safe))
+               out
+               #:insert-newlines? #t)
+  (close-output-port out))
 
 ; if 'path' is a file, do something
 (define (with-path-as-file loc path)
@@ -18,10 +27,6 @@
 ;; Finds Racket sources in all subdirs
 (for ([loc locs])
   (for ([path (in-directory loc)])
-
-    ;(define out (open-output-file (format "data~a.html" path)))
-    ;(write-xexpr '(div (p path)) out #:insert-newlines? #t)
-    ;(close-output-port out)
     (with-path-as-file loc path)
     ))
 
