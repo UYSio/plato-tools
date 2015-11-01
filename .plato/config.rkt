@@ -4,7 +4,7 @@
 
 (hash-set!
  plato-opts
- 'content-roots
+ 'asset-roots
  '("/home/opyate/Documents/stuff" "/home/opyate/Documents/stuff2"))
 
 (hash-set!
