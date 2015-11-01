@@ -2,8 +2,6 @@
 (require xml/xexpr)
 (require racket/include)
 
-(define config (expand-user-path "~/.plato.rkt"))
-(printf "Loading config at ~a\n\n" config)
 (require (file "~/.plato.rkt"))
 (define locs (hash-ref plato-opts 'locs))
 
