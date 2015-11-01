@@ -1,23 +1,30 @@
 #lang racket
-
 (require xml/xexpr)
+(require racket/include)
 
+(define config (expand-user-path "~/.plato.rkt"))
+(printf "Loading config at ~a\n\n" config)
+(require (file "~/.plato.rkt"))
+(define locs (hash-ref plato-opts 'locs))
 
-(define (with-asset path)
-  (printf "path: ~a\n" path)
-  )
+(define (something loc path)
+  (define sub (string-replace (path->string path) loc ""))
+  (printf "path: ~a\n" path))
+
+; if 'path' is a file, do something
+(define (with-path-as-file loc path)
+  (if (file-exists? path)
+      (something loc path)
+      #f))
 
 ;; Finds Racket sources in all subdirs
-(define locs
-  '("/home/opyate/Documents/stuff" "/home/opyate/Documents/stuff2"))
 (for ([loc locs])
   (for ([path (in-directory loc)])
 
-    (define sub (string-replace (path->string path) loc ""))
     ;(define out (open-output-file (format "data~a.html" path)))
     ;(write-xexpr '(div (p path)) out #:insert-newlines? #t)
     ;(close-output-port out)
-    (with-asset sub)
+    (with-path-as-file loc path)
     ))
 
 ;; Report each unique line from stdin
