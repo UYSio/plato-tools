@@ -2,7 +2,7 @@
 
 (require web-server/private/mime-types)
 
-(require "handlers/_import.rkt"
+(require "inithandlers.rkt"
          "handlers/_params.rkt")
 
 (provide dispatch-asset)
