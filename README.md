@@ -31,11 +31,11 @@ Uses same ```mime.types``` [recently pushed](https://github.com/racket/web-serve
 
 # Handlers
 
-Handlers do two things:
+Consider the content at ```/home/me/Documents/words/2015/10/31/asset.ext```
 
-* prepare a *content package* at a *location*.
-- *content package*: an index.html and whatever else needed to support it (e.g. images, etc)
-- *location*: a path in the output directory which is a function of the asset location.
+A handler will do this:
 
-E.g. if the asset location is ```/home/me/Documents/words/2015/10/31/pumpkin-suffrage.md``` then the *location* is ```{out-dir}/2015/10/31```.
-The contents will be ```index.html```, which contains the Markdown-rendered contents of ```pumpkin-suffrage.md```, possibly annotated with ```words``` as a tag or somesuch.
+* mkdir ```{{config/landing-page-dir}}/2015/10/31```
+* create a landing page ```{{config/landing-page-dir}}/2015/10/31/index.html```
+* mkdir ```{{config/entries-dir}}```
+* create a feed entry ```{{config/entries-dir}}/2015_10_31_asset.ext.html```
