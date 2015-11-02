@@ -2,7 +2,7 @@
 
 (provide handle-image)
 
-(require "../common.rkt"
+(require "base.rkt"
          "_params.rkt")
 
 (define (asset-landing-page params) #f)

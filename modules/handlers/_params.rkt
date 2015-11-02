@@ -1,5 +1,9 @@
 #lang racket
 
+; _params.rkt split out from base.rkt because
+; the struct is used by the dispatcher, and the dispatcher
+; doesn't need to see the stuff in base.
+
 ;; TODO can struct accessors be auto provided?
 (provide p p->string p-mime-type p-content-root p-asset-path p-out-dir)
 
