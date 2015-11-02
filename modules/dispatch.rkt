@@ -1,8 +1,8 @@
 #lang racket
 
-(require "inithandlers.rkt"
-         "mime/util.rkt"
-         "handlers/_params.rkt")
+(require "handlers/_init.rkt"
+         "handlers/_params.rkt"
+         "mime/util.rkt")
 
 (provide dispatch-asset)
 

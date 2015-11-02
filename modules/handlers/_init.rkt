@@ -3,7 +3,7 @@
 (provide lookup)
 
 ;; TODO require handlers/* ?
-(require "handlers/image.rkt")
+(require "image.rkt")
 
 (define lookup (hash
                 "image" handle-image))
