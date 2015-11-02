@@ -7,12 +7,26 @@
 
 (provide dispatch-asset)
 
+;; takes *nix 'dirname' portion of 'filename'
+;; and creates it recursively in 'base'
+;; and returns the new path as a string
+(define (mkdir base filename)
+  (define path-from-filename (path-only filename))
+  (if path-from-filename
+      (let (
+            [full (string-append base "/" (path->string path-from-filename))])
+        (make-directory* (string->path full))
+        full)
+      base))
+
 ;; dispatches an asset based on mime-type
-(define (dispatch-asset abs-path rel-path out-dir)
+(define (dispatch-asset abs-path rel-path landing-page-dir entries-dir)
+  ;; TODO clean up let*-hell below
   (let* ([mime-type (detect-mime-type abs-path)]
          [type (mime-type-type mime-type)]
          [subtype (mime-type-subtype mime-type)]
-         [params (p subtype rel-path out-dir)]
+         [asset-landing-page-dir (mkdir landing-page-dir rel-path)]
+         [params (p subtype rel-path asset-landing-page-dir entries-dir)]
          [ext (bytes->string/utf-8 (filename-extension abs-path))])
     (cond
       [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]

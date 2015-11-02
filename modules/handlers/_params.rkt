@@ -5,14 +5,15 @@
 ; doesn't need to see the stuff in base.
 
 ;; TODO can struct accessors be auto provided?
-(provide p p->string p-mime-type p-asset-path p-out-dir)
+(provide p p->string p-mime-type p-asset-path p-landing-page-dir p-entry-dir)
 
 ;; TODO check if mime-type can be set with auto-value if #f
-(struct p (mime-type asset-path out-dir))
+(struct p (mime-type asset-path landing-page-dir entry-dir))
 
 (define (p->string params)
   (format
-   "mime-type=[~a], asset-path=[~a], out-dir=[~a]"
+   "mime-type=[~a], asset-path=[~a], landing-page-dir=[~a], entry-dir=[~a]"
    (p-mime-type params)
    (p-asset-path params)
-   (p-out-dir params)))
+   (p-landing-page-dir params)
+   (p-entry-dir params)))
