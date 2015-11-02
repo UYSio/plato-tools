@@ -1,5 +1,6 @@
 #lang racket
 
+(require racket/path) ; for filename-extension
 (require "handlers/_init.rkt"
          "handlers/_params.rkt"
          "mime/util.rkt")
@@ -11,8 +12,9 @@
   (let* ([mime-type (detect-mime-type abs-path)]
          [type (mime-type-type mime-type)]
          [subtype (mime-type-subtype mime-type)]
-         [params (p subtype rel-path out-dir)])
-    (if (hash-has-key? lookup type)
-        ((hash-ref lookup type) params)
-        (printf "No handler for mime-type ~a\n" mime-type)
-        )))
+         [params (p subtype rel-path out-dir)]
+         [ext (bytes->string/utf-8 (filename-extension abs-path))])
+    (cond
+      [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
+      [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
+      [else (printf "No handler for mime-type ~a\n" mime-type)])))
