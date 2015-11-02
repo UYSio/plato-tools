@@ -1,9 +1,6 @@
 #lang racket
 
-(provide
- write-html
- get-relative-asset-path
- path->dothtml)
+(provide write-html get-relative-asset-path path->dothtml)
 
 (require xml)
 

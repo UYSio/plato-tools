@@ -2,7 +2,8 @@
 
 (provide handle-image)
 
-(require "../common.rkt")
+(require "../common.rkt"
+         "_params.rkt")
 
 ;; TODO define
 ; asset-landing-page    - the main index.html for the asset
@@ -23,5 +24,14 @@
          [safe (path->dothtml relative-asset-path)])
     (write-html (format "~a/snippets/~a" out-dir safe) `(div (p ,safe)))))
 
-(define (handle-image mime-type content-root asset-path out-dir)
-  (asset-listing-snippet content-root asset-path out-dir))
+;; TODO all handlers should be passed two things:
+;; a struct of params: like mime-type, config, asset-path etc
+;; a writer - the writer will know where to put generated content.
+;; The handler should only concern itself with a particular rendetion of
+;; something, and the writer will know where to put it.
+(define (handle-image params)
+  (printf "Handler received params: ~a\n" (p->string params))
+  (let ([content-root (p-content-root params)]
+        [asset-path (p-asset-path params)]
+        [out-dir (p-out-dir params)])
+    (asset-listing-snippet content-root asset-path out-dir)))
