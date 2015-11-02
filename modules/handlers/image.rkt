@@ -2,10 +2,17 @@
 
 (provide handle-image)
 
-(require "../writer.rkt")
+(require "../common.rkt")
 
 ;; TODO define
 ; asset-landing-page    - the main index.html for the asset
+
+
+;; the below s-expr is  quite generic.
+;; what we really want from a handler is to just spit out HTML (xexpr)
+;; and do the necessary post-production (so to speak) to get the assets in
+;; a serve-able form, i.e. photos retouched, and uploaded to S3,
+;; videos equalised and uploaded to S3, etc
 
 (define (asset-listing-snippet
          content-root
