@@ -8,11 +8,9 @@
 (define (asset-landing-page params) #f)
 
 (define (asset-entry params)
-  (let ([content-root (p-content-root params)]
-        [asset-path (p-asset-path params)]
+  (let ([asset-path (p-asset-path params)]
         [out-dir (p-out-dir params)])
-    (let* ([relative-asset-path (get-relative-asset-path content-root asset-path)]
-           [safe (path->dothtml relative-asset-path)])
+    (let* ([safe (path->dothtml asset-path)])
       (write-html (format "~a/snippets/~a" out-dir safe) `(div (p ,safe))))))
 
 (define (handle-image params)

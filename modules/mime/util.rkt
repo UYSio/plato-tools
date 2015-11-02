@@ -13,11 +13,11 @@
 (define (mime-type-type mime-type)
   (if mime-type
       (car (string-split (bytes->string/utf-8 mime-type) "/"))
-      "UNKNOWN_TYPE"))
+      'unknown-type))
 
 ;; given a mime-type (e.g. image/png), extract
 ;; the 'subtype' (e.g. png)
 (define (mime-type-subtype mime-type)
   (if mime-type
-      (cdr (string-split (bytes->string/utf-8 mime-type) "/"))
-      "UNKNOWN_SUBTYPE"))
+      (car (cdr (string-split (bytes->string/utf-8 mime-type) "/")))
+      'unknown-subtype))
