@@ -20,9 +20,11 @@
       base))
 
 ;; dispatches an asset based on mime-type
-(define (dispatch-asset abs-path rel-path landing-page-dir entries-dir)
+(define (dispatch-asset cfg abs-path rel-path)
   ;; TODO clean up let*-hell below
-  (let* ([mime-type (detect-mime-type abs-path)]
+  (let* ([landing-page-dir (dict-ref cfg 'landing-page-dir)]
+         [entries-dir (dict-ref cfg 'entries-dir)]
+         [mime-type (detect-mime-type abs-path)]
          [type (mime-type-type mime-type)]
          [subtype (mime-type-subtype mime-type)]
          [asset-landing-page-dir (mkdir landing-page-dir rel-path)]
