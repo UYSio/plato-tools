@@ -1,22 +1,36 @@
 #lang racket
 
 #|
-Ensures config is sane, then sends
-it off to the scanner.
+Ensures config is sane, dependencies exist,
+then sends it off to the scanner.
 |#
 
 (require racket/path
          "scan.rkt"
          (file "~/.plato/config.rkt"))
 
-;; send all assets to dispatcher
-(define (main config)
-
+(define (ensure-exists config)
   ;; ensure directories in config exists
   (for ([path-atom '(landing-page-dir entries-dir)])
-    (let ([path (dict-ref cfg path-atom)])
-      (make-directory* (string->path path))))
+    (let ([path (dict-ref config path-atom)])
+      (make-directory* (string->path path)))))
 
+; This will benefit from a threading macro
+; http://www.greghendershott.com/2013/05/the-threading-macro.html
+(define (ensure-trailing-slashes config)
+  (dict-set!
+   config
+   'asset-roots
+   (map (lambda (s) (string-append s "/"))
+        (map path->string
+             (map normalize-path
+                  (dict-ref config 'asset-roots))))))
+
+;; send all assets to dispatcher
+(define (main config)
+  (ensure-exists config)
+  (ensure-trailing-slashes config)
   (scan config))
 
+;; here we go...
 (main cfg)

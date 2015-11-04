@@ -3,8 +3,8 @@
 (provide cfg)
 
 ; configuration
-(define cfg
-  '((asset-roots . ("/home/opyate/Documents/stuff/" "/home/opyate/Documents/stuff2"))
-    (landing-page-dir . "/tmp/out/pages")
-    (entries-dir . "/tmp/out/entries")
-    (ignore . ".plato-ignore")))
+(define cfg (make-hash))
+(dict-set! cfg 'asset-roots '("/home/opyate/Documents/stuff/" "/home/opyate/Documents/stuff2"))
+(dict-set! cfg 'landing-page-dir "/tmp/out/pages")
+(dict-set! cfg 'entries-dir "/tmp/out/entries")
+(dict-set! cfg 'ignore ".plato-ignore")
