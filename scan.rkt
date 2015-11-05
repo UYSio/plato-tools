@@ -16,11 +16,9 @@ For each content location:
 
 (define (scan cfg)
 
-  (for ([asset-root-s (dict-ref cfg 'asset-roots)])
-    ;; add a trailing slash, even if already
-    (let ([asset-root (string-append asset-root-s "/")])
-      (for ([abs-path (in-directory asset-root)])
-        (let ([rel-path (path->string (find-relative-path asset-root abs-path))])
-          (if (file-exists? abs-path)
-              (dispatch-asset cfg abs-path rel-path)
-              #f))))))
+  (for ([asset-root (dict-ref cfg 'asset-roots)])
+    (for ([abs-path (in-directory asset-root)])
+      (let ([rel-path (path->string (find-relative-path asset-root abs-path))])
+        (if (file-exists? abs-path)
+            (dispatch-asset cfg abs-path rel-path)
+            #f)))))
