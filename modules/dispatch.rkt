@@ -20,17 +20,19 @@
       base))
 
 ;; dispatches an asset based on mime-type
-(define (dispatch-asset cfg abs-path rel-path)
-  ;; TODO clean up let*-hell below
-  (let* ([landing-page-dir (dict-ref cfg 'landing-page-dir)]
-         [entries-dir (dict-ref cfg 'entries-dir)]
-         [mime-type (detect-mime-type abs-path)]
-         [type (mime-type-type mime-type)]
-         [subtype (mime-type-subtype mime-type)]
-         [asset-landing-page-dir (mkdir landing-page-dir rel-path)]
-         [params (p subtype rel-path asset-landing-page-dir entries-dir)]
-         [ext (bytes->string/utf-8 (filename-extension abs-path))])
-    (cond
-      [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
-      [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
-      [else (printf "No handler for mime-type ~a\n" mime-type)])))
+; bundle -> files (abs paths) in a directory
+; directory -> the directory
+(define (dispatch-asset cfg directory bundle)
+  (let* ([entries-dir (dict-ref cfg 'entries-dir)]
+         [landing-page-dir (dict-ref cfg 'landing-page-dir)]
+         [asset-landing-page-dir (mkdir landing-page-dir directory)])
+    (for ([asset bundle])
+      (let* ([mime-type (detect-mime-type asset)]
+             [type (mime-type-type mime-type)]
+             [subtype (mime-type-subtype mime-type)]
+             [params (p subtype asset asset-landing-page-dir entries-dir)]
+             [ext (bytes->string/utf-8 (filename-extension asset))])
+        (cond
+          [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
+          [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
+          [else (printf "No handler for mime-type ~a\n" mime-type)])))))

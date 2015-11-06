@@ -13,7 +13,9 @@
 ;; turns a path /a/b/c.ext into a file name
 ;; like a_b_c.ext.html
 (define (path->dothtml path)
-  (string-append (string-replace path "/" "_") ".html"))
+  (let ([path-str (path->string path)])
+    (string-append (string-replace path-str "/" "_") ".html"))
+  )
 
 (define (asset-landing-page params)
   (let ([asset-path (p-asset-path params)]
@@ -24,4 +26,5 @@
   (let ([asset-path (p-asset-path params)]
         [entry-dir (p-entry-dir params)])
     (let* ([safe (path->dothtml asset-path)])
+      (printf ">> ~a\n" safe)
       (write-html (format "~a/~a" entry-dir safe) `(div (p ,safe))))))
