@@ -26,5 +26,5 @@ For each content location:
             (unless (empty? bundle)
               ; send to dispatcher the directory, and
               ; the file bundle in it.
-              (dispatch-asset cfg directory bundle)))
+              (dispatch-asset cfg asset-root directory bundle)))
           #f))))
