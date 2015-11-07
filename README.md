@@ -1,3 +1,10 @@
+# Start
+
+    git clone --recursive https://github.com/UYSio/plato-tools.git
+    make hoedown
+
+This last command cleans hoedown, updates it, then compiles it.
+
 # Misc tools
 
 ## Create date folder
