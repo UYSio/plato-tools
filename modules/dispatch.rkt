@@ -39,7 +39,7 @@
 ; subtype: png
 ; asset-rel-file: 2015/10/bar.png
 (define (dispatch-asset cfg asset-root asset-dir assets)
-  (printf "root: ~a, dir: ~a, assets: ~a\n" asset-root asset-dir assets)
+  ; compute parameters
   (let* ([entries-dir (dict-ref cfg 'entries-dir)]
          [landing-page-dir (dict-ref cfg 'landing-page-dir)]
          [asset-rel-dir (find-relative-path asset-root asset-dir)]
