@@ -18,14 +18,11 @@
   )
 
 (define (asset-landing-page params)
-  (let ([asset-path (p-asset-path params)]
-        [landing-page-dir (p-landing-page-dir params)])
+  (let ([landing-page-dir (p-landing-page-dir params)])
     (write-html (format "~a/~a" landing-page-dir "index.html") `(div (p "landing page")))))
 
 (define (asset-entry params)
-  (let* ([asset-path (p-asset-path params)]
-         [entry-dir (p-entry-dir params)]
-         [asset-root (p-asset-root params)]
-         [rel-asset-path (find-relative-path asset-root asset-path)]
-         [safe (path->dothtml rel-asset-path)])
+  (let* ([entry-dir (p-entry-dir params)]
+         [asset-rel-file (p-asset-rel-file params)]
+         [safe (path->dothtml asset-rel-file)])
     (write-html (format "~a/~a" entry-dir safe) `(div (p ,safe)))))

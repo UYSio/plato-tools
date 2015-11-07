@@ -15,28 +15,46 @@
     (make-directory* (string->path full))
     full))
 
-;; dispatches an asset based on mime-type
-; bundle -> files (abs paths) in a directory
-; directory -> the directory
-; asset-root -> common between 'directory' and all files
-; in 'bundle'.
-(define (dispatch-asset cfg asset-root directory bundle)
-  ;(printf "root: ~a, dir: ~a, bundle: ~a\n" asset-root directory bundle)
-  (let* ([rel-dir (find-relative-path asset-root directory)]
-         [entries-dir (dict-ref cfg 'entries-dir)]
+; Dispatches an asset based on mime-type.
+;
+; Variable names with examples:
+;
+; asset-root: /a/b/
+; asset-dir: /a/b/2015/10/
+; assets: (/a/b/2015/10/foo.txt /a/b/2015/10/bar.png)
+;
+; Then the script below computes:
+; asset-rel-dir: 2015/10/
+;
+; Get from cfg:
+; landing-page-dir: /out/landing
+; entries-dir: /out/entries
+;
+; Then it creates asset-rel-dir recursively in landing-page-dir, to get:
+; asset-landing-page-dir: /out/landing/2015/10
+;
+; Then it computes, for each asset, e.g. bar.png:
+; mime-type: image/png
+; type: image
+; subtype: png
+; asset-rel-file: 2015/10/bar.png
+(define (dispatch-asset cfg asset-root asset-dir assets)
+  (printf "root: ~a, dir: ~a, assets: ~a\n" asset-root asset-dir assets)
+  (let* ([entries-dir (dict-ref cfg 'entries-dir)]
          [landing-page-dir (dict-ref cfg 'landing-page-dir)]
-         [asset-landing-page-dir (mkdir landing-page-dir rel-dir)])
-    ;; TODO handle bundles with multiple assets
-    ; e.g. if a PNG is not the only asset in a bundle, it
+         [asset-rel-dir (find-relative-path asset-root asset-dir)]
+         [asset-landing-page-dir (mkdir landing-page-dir asset-rel-dir)])
+    ;; TODO handle assetss with multiple assets
+    ; e.g. if a PNG is not the only asset in a assets, it
     ; mightn't be an 'image'/'photo' form, but rather
     ; a picture supporting something else, like a markdown.
-    (for ([asset bundle])
+    (for ([asset assets])
       (let* ([mime-type (detect-mime-type asset)]
              [type (mime-type-type mime-type)]
              [subtype (mime-type-subtype mime-type)]
+             [asset-rel-file (find-relative-path asset-root asset)]
              [params (p
-                      asset-root
-                      rel-dir
+                      asset-rel-file
                       subtype
                       asset
                       asset-landing-page-dir
