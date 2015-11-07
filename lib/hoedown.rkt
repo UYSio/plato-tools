@@ -7,12 +7,14 @@
 ;;
 ;;  (markdown "Hello, world")  --->   "<p>Hello, world</p>\n"
 
+(provide markdown)
+
 (require ffi/unsafe
 	 ffi/unsafe/define
 	 ffi/unsafe/alloc
 	 test-engine/racket-tests)
 
-(define-ffi-definer define-hoedown (ffi-lib "hoedown/libhoedown"))
+(define-ffi-definer define-hoedown (ffi-lib "lib/hoedown/libhoedown"))
 
 ;; The 3 data structures hoedown needs to render text -> html
 (define _hoedown_renderer (_cpointer 'hoedown_renderer))

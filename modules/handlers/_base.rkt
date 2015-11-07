@@ -14,8 +14,7 @@
 ;; like a_b_c.ext.html
 (define (path->dothtml path)
   (let ([path-str (path->string path)])
-    (string-append (string-replace path-str "/" "-") ".html"))
-  )
+    (string-append (string-replace path-str "/" "-") ".html")))
 
 (define (asset-landing-page params)
   (let ([landing-page-dir (p-landing-page-dir params)])
