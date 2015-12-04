@@ -44,7 +44,7 @@
          [landing-page-dir (dict-ref cfg 'landing-page-dir)]
          [asset-rel-dir (find-relative-path asset-root asset-dir)]
          [asset-landing-page-dir (mkdir landing-page-dir asset-rel-dir)])
-    ;; TODO handle assetss with multiple assets
+    ;; TODO handle assets with multiple assets
     ; e.g. if a PNG is not the only asset in a assets, it
     ; mightn't be an 'image'/'photo' form, but rather
     ; a picture supporting something else, like a markdown.
