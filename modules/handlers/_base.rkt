@@ -1,6 +1,6 @@
 #lang racket
 
-(provide asset-landing-page asset-entry)
+(provide asset-landing-page asset-entry path->dothtml)
 
 (require xml)
 (require "_params.rkt")
