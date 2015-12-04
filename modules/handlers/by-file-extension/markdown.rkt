@@ -36,7 +36,10 @@
          [html (markdown markdown-str)])
     (let ([landing-page-dir (p-landing-page-dir params)])
       (display-to-file
-       html
+       (string-append
+        (file->string "header.html")
+        html
+        (file->string "footer.html"))
        (format "~a/~a" landing-page-dir "index.html")
        #:mode 'text
        #:exists 'replace))
