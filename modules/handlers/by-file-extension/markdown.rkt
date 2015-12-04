@@ -26,17 +26,14 @@
           (let ([fm (parse-front-matter-item line)])
             (dict-set! front-matter (first fm) (second fm)))))
     (let ([markdown-str (foldl (lambda (x acc) (format "~a\n~a" acc x)) "" markdown-list)])
-      ;(printf "MD: ~a\n" (markdown markdown-str))
-      ;(printf "FM: ~a\n" front-matter)
       (list markdown-str front-matter))))
 
-(define (lp params)
+(define (handle params)
   (let* ([markdown-file (p-asset-path params)]
-        ;[markdown-str (file->string markdown-file)]
          [parsed (parse markdown-file)]
          [markdown-str (first parsed)]
-         [front-matter (second parsed)]
-        [html (markdown markdown-str)])
+         [front-matter (second parsed)] ; completely ignored for now
+         [html (markdown markdown-str)])
     (let ([landing-page-dir (p-landing-page-dir params)])
       (display-to-file
        html
@@ -49,6 +46,5 @@
 
 (define (handle-markdown params)
   (printf "Handler=[markdown], params: ~a\n" (p->string params))
-  (lp params)
-  ;(let ([markdown-file (p-asset-path params)]) (parse-front-matter markdown-file))
+  (handle params)
   (asset-entry params))
