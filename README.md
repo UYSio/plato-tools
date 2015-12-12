@@ -42,7 +42,9 @@ Consider the content at ```/home/me/Documents/words/2015/10/31/asset.ext```
 
 A handler will do this:
 
-* mkdir ```{{config/landing-page-dir}}/2015/10/31```
-* create a landing page ```{{config/landing-page-dir}}/2015/10/31/index.html```
-* mkdir ```{{config/entries-dir}}```
-* create a feed entry ```{{config/entries-dir}}/2015_10_31_asset.ext.html```
+* mkdir ```{{config/output-root}}/pages/2015/10/31```
+* create a landing page ```{{config/output-root}}/pages/2015/10/31/index.html```
+* mkdir ```{{config/output-entries}}```
+* create a feed entry ```{{config/output-entries}}/2015_10_31_asset.ext.html```
+
+"pages" is currently hard-coded, and relative to {{config/output-root}}.

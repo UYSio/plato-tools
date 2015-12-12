@@ -22,9 +22,10 @@ For each content location:
     (ormap matcher bundle)))
 
 (define (scan cfg)
-  ;; for each sub-directory of asset-root
-  (for ([asset-root (dict-ref cfg 'asset-roots)])
-    (for ([directory (in-directory asset-root)])
+  (printf "\n[1] Scanning...\n")
+  ;; for each sub-directory of input-root
+  (for ([input-root (dict-ref cfg 'input-roots)])
+    (for ([directory (in-directory input-root)])
       (if (directory-exists? directory)
           (let* ([files (sequence-filter file-exists?
                                          (in-directory directory (lambda (x) #f)))]
@@ -32,5 +33,5 @@ For each content location:
             (unless (or (empty? bundle) (skip? cfg bundle))
               ; send to dispatcher the directory, and
               ; the file bundle in it.
-              (dispatch-asset cfg asset-root directory bundle)))
+              (dispatch-asset cfg input-root directory bundle)))
           #f))))

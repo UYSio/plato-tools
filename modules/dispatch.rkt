@@ -27,11 +27,11 @@
 ; asset-rel-dir: 2015/10/
 ;
 ; Get from cfg:
-; landing-page-dir: /out/landing
-; entries-dir: /out/entries
+; output-root: /out
+; output-entries: /out/entries
 ;
-; Then it creates asset-rel-dir recursively in landing-page-dir, to get:
-; asset-landing-page-dir: /out/landing/2015/10
+; Then it creates asset-rel-dir recursively in {output-root}/pages, to get:
+; asset-output-landing-pages: /out/pages/2015/10
 ;
 ; Then it computes, for each asset, e.g. bar.png:
 ; mime-type: image/png
@@ -40,10 +40,11 @@
 ; asset-rel-file: 2015/10/bar.png
 (define (dispatch-asset cfg asset-root asset-dir assets)
   ; compute parameters
-  (let* ([entries-dir (dict-ref cfg 'entries-dir)]
-         [landing-page-dir (dict-ref cfg 'landing-page-dir)]
+  (let* ([output-entries (dict-ref cfg 'output-entries)]
+         [output-root (dict-ref cfg 'output-root)]
+         [output-landing-pages (string-append output-root "/pages")]
          [asset-rel-dir (find-relative-path asset-root asset-dir)]
-         [asset-landing-page-dir (mkdir landing-page-dir asset-rel-dir)])
+         [asset-output-landing-pages (mkdir output-landing-pages asset-rel-dir)])
     ;; TODO handle assets with multiple assets
     ; e.g. if a PNG is not the only asset in a assets, it
     ; mightn't be an 'image'/'photo' form, but rather
@@ -57,8 +58,8 @@
                       asset-rel-file
                       subtype
                       asset
-                      asset-landing-page-dir
-                      entries-dir)]
+                      asset-output-landing-pages
+                      output-entries)]
              [ext (bytes->string/utf-8 (filename-extension asset))])
         (cond
           [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]

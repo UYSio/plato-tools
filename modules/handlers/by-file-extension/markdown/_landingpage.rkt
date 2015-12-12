@@ -5,12 +5,12 @@
 (require "../../_params.rkt")
 
 (define (handle-landing-page params html)
-  (let ([landing-page-dir (p-landing-page-dir params)])
+  (let ([output-landing-pages (p-output-landing-pages params)])
     (display-to-file
      (string-append
-      (file->string "templates/header.html")
+      (file->string "templates/markdown/header.html")
       html
-      (file->string "templates/footer.html"))
-     (format "~a/~a" landing-page-dir "index.html")
+      (file->string "templates/markdown/footer.html"))
+     (format "~a/~a" output-landing-pages "index.html")
      #:mode 'text
      #:exists 'replace)))

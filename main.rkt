@@ -8,13 +8,14 @@ then sends it off to the scanner.
 (require racket/path
          racket/date
          "modules/scan.rkt"
+         "modules/collate.rkt"
          (file "~/.plato/config.rkt"))
 
 (date-display-format 'iso-8601)
 
 (define (ensure-exists config)
   ;; ensure directories in config exists
-  (for ([path-atom '(landing-page-dir entries-dir)])
+  (for ([path-atom '(output-root output-entries)])
     (let ([path (dict-ref config path-atom)])
       (make-directory* (string->path path)))))
 
@@ -23,17 +24,18 @@ then sends it off to the scanner.
 (define (ensure-trailing-slashes config)
   (dict-set!
    config
-   'asset-roots
+   'input-roots
    (map (lambda (s) (string-append s "/"))
         (map path->string
              (map normalize-path
-                  (dict-ref config 'asset-roots))))))
+                  (dict-ref config 'input-roots))))))
 
 ;; send all assets to dispatcher
 (define (main config)
   (ensure-exists config)
   (ensure-trailing-slashes config)
-  (scan config))
+  (scan config)
+  (collate config))
 
 ;; here we go...
 (main cfg)

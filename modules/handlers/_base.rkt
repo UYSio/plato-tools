@@ -17,11 +17,11 @@
     (string-append (string-replace path-str "/" "-") ".html")))
 
 (define (asset-landing-page params)
-  (let ([landing-page-dir (p-landing-page-dir params)])
-    (write-html (format "~a/~a" landing-page-dir "index.html") `(div (p "landing page")))))
+  (let ([output-landing-pages (p-output-landing-pages params)])
+    (write-html (format "~a/~a" output-landing-pages "index.html") `(div (p "landing page")))))
 
 (define (asset-entry params)
-  (let* ([entry-dir (p-entry-dir params)]
+  (let* ([output-entry (p-output-entry params)]
          [asset-rel-file (p-asset-rel-file params)]
          [safe (path->dothtml asset-rel-file)])
-    (write-html (format "~a/~a" entry-dir safe) `(div (p ,safe)))))
+    (write-html (format "~a/~a" output-entry safe) `(div (p ,safe)))))
