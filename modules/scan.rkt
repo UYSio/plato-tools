@@ -10,7 +10,7 @@ For each content location:
 |#
 
 (require racket/path
-         "modules/dispatch.rkt")
+         "dispatch.rkt")
 
 (provide scan)
 

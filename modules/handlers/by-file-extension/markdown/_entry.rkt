@@ -6,7 +6,6 @@
          "../../_params.rkt"
          racket/date)
 
-
 (define (handle-entry params front-matter)
   (let* ([entry-dir (p-entry-dir params)]
          [asset-rel-file (p-asset-rel-file params)]
