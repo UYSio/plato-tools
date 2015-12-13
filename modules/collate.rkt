@@ -17,7 +17,7 @@ cfg.output-entries into a home listing page.
          [output-entries (dict-ref cfg 'output-entries)])
     ; overwrite home with header
     (display-to-file
-     (file->string "templates/homepage/header.html")
+     (file->string "static/templates/homepage/header.html")
      output-home-page
      #:mode 'text
      #:exists 'replace)
@@ -34,7 +34,7 @@ cfg.output-entries into a home listing page.
 
     ; append footer
     (display-to-file
-     (file->string "templates/homepage/footer.html")
+     (file->string "static/templates/homepage/footer.html")
      output-home-page
      #:mode 'text
      #:exists 'append)

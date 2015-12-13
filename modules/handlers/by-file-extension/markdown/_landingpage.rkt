@@ -8,9 +8,9 @@
   (let ([output-landing-pages (p-output-landing-pages params)])
     (display-to-file
      (string-append
-      (file->string "templates/markdown/header.html")
+      (file->string "static/templates/markdown/header.html")
       html
-      (file->string "templates/markdown/footer.html"))
+      (file->string "static/templates/markdown/footer.html"))
      (format "~a/~a" output-landing-pages "index.html")
      #:mode 'text
      #:exists 'replace)))
