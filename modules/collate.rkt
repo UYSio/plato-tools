@@ -10,6 +10,16 @@ cfg.output-entries into a home listing page.
 
 (provide collate)
 
+(define (refresh out dir)
+  ; remove stale assets
+  (delete-directory/files
+   (format "~a/~a" out dir)
+   #:must-exist? #f)
+  ; copy assets
+  (copy-directory/files
+   (format "static/templates/homepage/~a" dir)
+   (format "~a/~a" out dir)))
+
 (define (collate cfg)
   (printf "\n[2] Collating...\n")
   (let* ([output-root (dict-ref cfg 'output-root)]
@@ -38,4 +48,7 @@ cfg.output-entries into a home listing page.
      output-home-page
      #:mode 'text
      #:exists 'append)
-    ))
+
+    ; refresh static assets
+    (refresh output-root "js")
+    (refresh output-root "css")))
