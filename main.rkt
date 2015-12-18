@@ -8,7 +8,7 @@ then sends it off to the scanner.
 (require racket/path
          racket/date
          "modules/scan.rkt"
-         "modules/collate.rkt"
+         "modules/collate/main.rkt"
          (file "~/.plato/config.rkt"))
 
 (date-display-format 'iso-8601)
