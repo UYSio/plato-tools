@@ -6,7 +6,6 @@ cfg.output-entries into a home listing page.
 |#
 
 (require
-         "../dispatch.rkt"
          "_home.rkt"
          "_static.rkt")
 

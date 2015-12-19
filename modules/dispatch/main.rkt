@@ -1,9 +1,9 @@
 #lang racket
 
 (require racket/path) ; for filename-extension
-(require "handlers/_init.rkt"
-         "handlers/_params.rkt"
-         "mime/util.rkt")
+(require "../handlers/_init.rkt"
+         "../handlers/_params.rkt"
+         "../mime/util.rkt")
 
 (provide dispatch-asset)
 
@@ -45,10 +45,6 @@
          [output-landing-pages (string-append output-root "/pages")]
          [asset-rel-dir (find-relative-path asset-root asset-dir)]
          [asset-output-landing-pages (mkdir output-landing-pages asset-rel-dir)])
-    ;; TODO handle assets with multiple assets
-    ; e.g. if a PNG is not the only asset in a assets, it
-    ; mightn't be an 'image'/'photo' form, but rather
-    ; a picture supporting something else, like a markdown.
     (for ([asset assets])
       (let* ([mime-type (detect-mime-type asset)]
              [type (mime-type-type mime-type)]
@@ -64,4 +60,4 @@
         (cond
           [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
           [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
-          [else (printf "No handler for mime-type ~a\n" mime-type)])))))
+          [else (printf "\tNo handler for mime-type ~a\n" mime-type)])))))

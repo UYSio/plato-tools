@@ -33,5 +33,5 @@ Then another 2 steps:
     (handle-entry params front-matter)))
 
 (define (handle-markdown params)
-  (printf "Handler=[markdown], params: ~a\n" (p->string params))
+  (printf "\tHandler=[markdown], params: ~a\n" (p->string params))
   (handle params))

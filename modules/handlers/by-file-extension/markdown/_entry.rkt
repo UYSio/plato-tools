@@ -15,7 +15,7 @@
          [date-str (date->string (current-date) #t)])
     (display-to-file
      (string-append
-      "<div class='element__item element__item--width2 element__item--height2 wwlf' data-category='wwlf'>
+      "<div class='element__item wwlf' data-category='wwlf'>
             <h3 class='title'>"(hash-ref front-matter "title")
             "<a href='" output-landing-page "'>🔗</a></h3>
             <p class='description'>" (hash-ref front-matter "description") "</p>

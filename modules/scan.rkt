@@ -10,7 +10,7 @@ For each content location:
 |#
 
 (require racket/path
-         "dispatch.rkt")
+         "dispatch/main.rkt")
 
 (provide scan)
 
@@ -31,6 +31,7 @@ For each content location:
                                          (in-directory directory (lambda (x) #f)))]
                  [bundle (sequence->list files)])
             (unless (or (empty? bundle) (skip? cfg bundle))
+              (printf "\n\033[0;33m₽lato\t\033[0;32m~a\033[0m\n" bundle)
               ; send to dispatcher the directory, and
               ; the file bundle in it.
               (dispatch-asset cfg input-root directory bundle)))
