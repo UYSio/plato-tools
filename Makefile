@@ -11,4 +11,9 @@ clean-hoedown:
 update-hoedown:
 	git submodule init
 	git submodule update
-	echo "If the submodule was updated, remember to push!"
+	cd lib/hoedown
+	git pull origin master
+	cd ../..
+	git status
+	@echo "git add lib/hoedown"
+	@echo "git commit -m \"hoedown updated\""
