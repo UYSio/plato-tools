@@ -1,12 +1,12 @@
-.PHONY: hoedown clean-hoedown compile-hoedown update-hoedown
+.PHONY: prep run hoedown clean-hoedown compile-hoedown update-hoedown
 
 hoedown: clean-hoedown update-hoedown compile-hoedown
 
 compile-hoedown:
-	cd lib/hoedown && $(MAKE)
+	cd lib/hoedown && $(MAKE) && ln -s libhoedown.so.3 libhoedown.dylib 
 
 clean-hoedown:
-	cd lib/hoedown && $(MAKE) clean
+	cd lib/hoedown && $(MAKE) clean && rm libhoedown.so.3 libhoedown.dylib
 
 update-hoedown:
 	git submodule init
@@ -17,3 +17,8 @@ update-hoedown:
 	git status
 	@echo "git add lib/hoedown"
 	@echo "git commit -m \"hoedown updated\""
+
+prep:
+	./scripts/prep.sh
+run:
+	racket main.rkt
