@@ -12,11 +12,23 @@
          [output-landing-pages (p-output-landing-pages params)]
          [output-landing-page (format "~a/~a" output-landing-pages "index.html")]
          [safe (path->dothtml asset-rel-file)]
-         [date-str (date->string (current-date) #t)])
+         [date-str (date->string (current-date) #t)]
+         [local-asset (string-append output-landing-pages "/" (path->string (file-name-from-path asset-rel-file)))])
+    ;; copy the image
+    (copy-file
+     (p-asset-path params)
+     local-asset)
+
+    ;; entry
     (display-to-file
      (string-append
-      "<div class='element__item image' data-category='image'><a href='#'><img src='"
-      (path->string asset-rel-file)
+      "<div class='element__item image' data-category='image'><a href='"
+      local-asset
+      "'><img src='"
+      (string-append
+       "pages/"
+       (path->string asset-rel-file))
+
       "'></a></div>")
      (format "~a/~a" output-entry safe)
      #:mode 'text
