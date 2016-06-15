@@ -7,6 +7,25 @@ body {
     background: #D3D9A6
 }
 
+.element__item.wwlf .tags {
+    color: #8c6764;
+}
+
+.element__item.wwlf p {
+    padding-top: 10px;
+}
+
+.element__item.wwlf .category {
+    display: none;
+}
+
+.element__item.wwlf .date {
+    color: #c8b3b2;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
 .element__item.wwsf {
     background: #FBFFDD
 }
