@@ -18,7 +18,7 @@
 
 (define (asset-landing-page params)
   (let ([output-landing-pages (p-output-landing-pages params)])
-    (write-html (format "~a/~a" output-landing-pages "index.html") `(div (p "landing page")))))
+    (write-html (format "~a/~a" output-landing-pages "index.html") `(div (p "TODO landing page")))))
 
 (define (asset-entry params)
   (let* ([output-entry (p-output-entry params)]
