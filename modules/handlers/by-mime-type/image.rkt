@@ -15,9 +15,9 @@
          [date-str (date->string (current-date) #t)])
     (display-to-file
      (string-append
-      "<div class='element__item image' data-category='image'>
-       <a href='#'>(todo image)</a>
-       </div>")
+      "<div class='element__item image' data-category='image'><a href='#'><img src='"
+      (path->string asset-rel-file)
+      "'></a></div>")
      (format "~a/~a" output-entry safe)
      #:mode 'text
      #:exists 'replace)))

@@ -15,14 +15,14 @@
          [date-str (date->string (current-date) #t)])
     (display-to-file
      (string-append
-      "<div class='element__item wwlf' data-category='wwlf'>
-            <h3 class='title'>"(hash-ref front-matter "title")
-            "<a href='" output-landing-page "'>🔗</a></h3>
-            <p class='description'>" (hash-ref front-matter "description") "</p>
-            <p class='category'>" (hash-ref front-matter "category") "</p>
-            <p class='tags'>" (hash-ref front-matter "tags") "</p>
-            <p class='date'>" date-str "</p>
-        </div>")
+      "<div class='element__item wwlf' data-category='wwlf'>"
+      "<h3 class='title'>"(hash-ref front-matter "title")
+      "<a href='" output-landing-page "'>🔗</a></h3>"
+      "<p class='description'>" (hash-ref front-matter "description") "</p>"
+      "<p class='category'>" (hash-ref front-matter "category") "</p>"
+      "<p class='tags'>" (hash-ref front-matter "tags") "</p>"
+      "<p class='date'>" date-str "</p>"
+      "</div>")
      (format "~a/~a" output-entry safe)
      #:mode 'text
      #:exists 'replace)))
