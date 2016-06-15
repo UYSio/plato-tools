@@ -1,0 +1,5 @@
+export EXAMPLES=$(pwd)/examples
+export LOC1=$EXAMPLES/over-here
+export LOC2=$EXAMPLES/over-there
+export OUT_ROOT=/tmp/plato/out
+export OUT_ENTRIES=/tmp/plato/entries 

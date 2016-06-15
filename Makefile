@@ -1,4 +1,6 @@
-.PHONY: prep run hoedown clean-hoedown compile-hoedown update-hoedown
+.PHONY: all clean prep run hoedown clean-hoedown compile-hoedown update-hoedown
+
+all: clean prep run
 
 hoedown: clean-hoedown update-hoedown compile-hoedown
 
@@ -19,6 +21,10 @@ update-hoedown:
 	@echo "git commit -m \"hoedown updated\""
 
 prep:
-	./scripts/prep.sh
+	@./scripts/prep.sh force
+
+clean:
+	@./scripts/clean.sh
+
 run:
-	racket main.rkt
+	@racket main.rkt
