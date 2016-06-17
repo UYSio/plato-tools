@@ -17,7 +17,8 @@
     ;; copy the image
     (copy-file
      (p-asset-path params)
-     local-asset)
+     local-asset
+     #t)
 
     ;; entry
     (display-to-file
