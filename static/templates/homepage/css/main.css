@@ -1,14 +1,15 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 .elements,
 body {
     background: #fff
 }
 
 .element__item.wwlf {
-    background: #D3D9A6
+    background: rgba(166, 205, 217, 0.42);
 }
 
 .element__item.wwlf .tags {
