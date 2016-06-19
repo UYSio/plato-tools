@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .elements,
 body {
     background: #fff
@@ -123,30 +127,30 @@ body {
 
 .elements {
     width: 100%;
-    padding-left: 34px
+    padding-left: 10px
 }
 
 .element__item {
-    width: 340px;
-    height: 340px;
-    margin-top: 34px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
     padding: 10px
 }
 
 .element__item--width2 {
-    width: 714px
+    width: 410px
 }
 
 .element__item--height2 {
-    height: 714px
+    height: 410px
 }
 
 .element__gutter {
-    width: 34px
+    width: 10px
 }
 
 .element__column {
-    width: 340px
+    width: 200px
 }
 
 .element__item>* {
