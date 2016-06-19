@@ -11,8 +11,7 @@
          [asset-rel-file (p-asset-rel-file params)]
          [output-landing-pages (p-output-landing-pages params)]
          [output-landing-page (format "~a/~a" output-landing-pages "index.html")]
-         [safe (path->dothtml asset-rel-file)]
-         [date-str (date->string (current-date) #t)])
+         [safe (path->dothtml asset-rel-file)])
     (display-to-file
      (string-append
       "<div class='element__item wwlf' data-category='wwlf'>"
@@ -21,7 +20,7 @@
       "<p class='description'>" (hash-ref front-matter "description") "</p>"
       "<p class='category'>" (hash-ref front-matter "category") "</p>"
       "<p class='tags'>" (hash-ref front-matter "tags") "</p>"
-      "<p class='date'>" date-str "</p>"
+      "<p class='date'>" (p-the-date params) "</p>"
       "</div>")
      (format "~a/~a" output-entry safe)
      #:mode 'text

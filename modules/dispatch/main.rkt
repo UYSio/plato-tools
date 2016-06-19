@@ -1,7 +1,8 @@
 #lang racket
 
 (require racket/path) ; for filename-extension
-(require "../handlers/_init.rkt"
+(require "_date.rkt"
+         "../handlers/_init.rkt"
          "../handlers/_params.rkt"
          "../mime/util.rkt")
 
@@ -50,12 +51,14 @@
              [type (mime-type-type mime-type)]
              [subtype (mime-type-subtype mime-type)]
              [asset-rel-file (find-relative-path asset-root asset)]
+             [the-date (guess-date asset-rel-file)]
              [params (p
                       asset-rel-file
                       subtype
                       asset
                       asset-output-landing-pages
-                      output-entries)]
+                      output-entries
+		      the-date)]
              [ext (bytes->string/utf-8 (filename-extension asset))])
         (cond
           [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
