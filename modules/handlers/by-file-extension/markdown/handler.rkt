@@ -23,7 +23,7 @@ Then another 2 steps:
   (let* ([markdown-file (p-asset-path params)]
          [parsed (parse markdown-file)]
          [markdown-str (first parsed)]
-         [front-matter (second parsed)] ; completely ignored for now
+         [front-matter (second parsed)]
          [html (markdown markdown-str)])
 
     ;; landing page
