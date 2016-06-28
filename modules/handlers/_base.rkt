@@ -1,6 +1,6 @@
 #lang racket
 
-(provide handle-landing-page asset-entry path->dothtml)
+(provide handle-landing-page asset-entry path->dothtml strip-outpath)
 
 (require xml)
 (require "_params.rkt")
@@ -33,3 +33,8 @@
          [asset-rel-file (p-asset-rel-file params)]
          [safe (path->dothtml asset-rel-file)])
     (write-html (format "~a/~a" output-entry safe) `(div (p ,safe)))))
+
+;; strips '/tmp/plato/out/' from '/tmp/plato/out/pages/2015/my-content.html'
+(define (strip-outpath path params)
+  (let [[base (p-output-root params)]]
+    (path->string (find-relative-path base path))))

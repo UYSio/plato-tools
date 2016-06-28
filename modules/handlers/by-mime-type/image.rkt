@@ -31,9 +31,9 @@
     (display-to-file
      (string-append
       "<div class='element__item image' data-category='image'><a href='"
-      local-asset
+      (strip-outpath local-asset params)
       "'><img src='"
-      thumb
+      (strip-outpath thumb params)
 
       "'></a></div>")
      (format "~a/~a" output-entry safe)

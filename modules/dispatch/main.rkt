@@ -53,6 +53,7 @@
              [asset-rel-file (find-relative-path asset-root asset)]
              [the-date (guess-date asset-rel-file)]
              [params (p
+                      output-root
                       asset-rel-file
                       subtype
                       asset
