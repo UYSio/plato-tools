@@ -16,7 +16,6 @@ Then another 2 steps:
          "../../_params.rkt"
          "../../../../lib/hoedown.rkt"
          "_parser.rkt"
-         "_landingpage.rkt"
          "_entry.rkt")
 
 (define (handle params)

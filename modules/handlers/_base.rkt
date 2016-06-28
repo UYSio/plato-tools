@@ -1,6 +1,6 @@
 #lang racket
 
-(provide asset-landing-page asset-entry path->dothtml)
+(provide handle-landing-page asset-entry path->dothtml)
 
 (require xml)
 (require "_params.rkt")
@@ -16,9 +16,17 @@
   (let ([path-str (path->string path)])
     (string-append (string-replace path-str "/" "-") ".html")))
 
-(define (asset-landing-page params)
+(define (handle-landing-page params html)
   (let ([output-landing-pages (p-output-landing-pages params)])
-    (write-html (format "~a/~a" output-landing-pages "index.html") `(div (p "TODO landing page")))))
+    (display-to-file
+     (string-append
+      (file->string "static/templates/markdown/header.html")
+      "<!-- modules/handlers/by-mime-type/image/_landingpage.rkt -->"
+      html
+      (file->string "static/templates/markdown/footer.html"))
+     (format "~a/~a" output-landing-pages "index.html")
+     #:mode 'text
+     #:exists 'replace)))
 
 (define (asset-entry params)
   (let* ([output-entry (p-output-entry params)]

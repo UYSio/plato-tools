@@ -67,7 +67,7 @@ body {
 
 .element__item.image img {
     /* imgs are usually wider than they are high, so specify width first. */
-    max-width: 340px;
+    max-width: 200px;
     width: 100%;
     height: auto;
     position: absolute;
