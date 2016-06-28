@@ -31,3 +31,9 @@ A handler will do this:
 * create a feed entry ```{{config/output-entries}}/2015_10_31_asset.ext.html```
 
 "pages" is currently hard-coded, and relative to {{config/output-root}}.
+
+# How it works
+
+An "entry" is written for each asset, into `out-entries`.
+
+The `collate` module then writes all those entries out to the home page.

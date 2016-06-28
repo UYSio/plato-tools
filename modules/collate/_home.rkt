@@ -10,8 +10,15 @@
    #:mode 'text
    #:exists 'replace)
 
+  ;; debug
+  (display-to-file
+   "<!-- modules/collate/_home.rkt -->"
+   output-home-page
+   #:mode 'text
+   #:exists 'append)
+
   ; append entries
-  (for ([entry (in-directory output-entries)])
+  (for ([entry (reverse (sequence->list (in-directory output-entries)))])
     (if (file-exists? entry)
         (display-to-file
          (file->string entry)

@@ -9,6 +9,7 @@
     (display-to-file
      (string-append
       (file->string "static/templates/markdown/header.html")
+      "<!-- modules/handlers/by-file-extension/markdown/_landingpage.rkt -->"
       html
       (file->string "static/templates/markdown/footer.html"))
      (format "~a/~a" output-landing-pages "index.html")

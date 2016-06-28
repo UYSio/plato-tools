@@ -34,7 +34,7 @@
 ; Then it creates asset-rel-dir recursively in {output-root}/pages, to get:
 ; asset-output-landing-pages: /out/pages/2015/10
 ;
-; Then it computes, for each asset, e.g. bar.png:
+; Then it computes a rendition for each asset, e.g. bar.png:
 ; mime-type: image/png
 ; type: image
 ; subtype: png
@@ -58,7 +58,7 @@
                       asset
                       asset-output-landing-pages
                       output-entries
-		      the-date)]
+                      the-date)]
              [ext (bytes->string/utf-8 (filename-extension asset))])
         (cond
           [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
