@@ -1,3 +1,7 @@
+# What is this?
+
+A manifestation of [₽lato](https://github.com/UYSio/plato).
+
 # Start
 
     git clone --recursive https://github.com/UYSio/plato-tools.git
