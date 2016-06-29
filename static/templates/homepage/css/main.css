@@ -7,7 +7,9 @@ body {
 body {
     background: #fff
 }
-
+.element__item.intro {
+    background: #A4E6D1;
+}
 .element__item.wwlf {
     background: rgba(166, 205, 217, 0.42);
 }
@@ -33,6 +35,18 @@ body {
 
 .element__item.wwsf {
     background: #FBFFDD
+}
+.element__item.wwsf p {
+    padding-top: 10px;
+}
+.element__item.wwlf .content {
+    /* nothing yet */
+}
+.element__item.wwsf .date {
+    color: #c8b3b2;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 .element__item.project {

@@ -1,0 +1,1 @@
+RT <a href="http://twitter.com/nickwsmith">@nickwsmith</a>: FuckItJS: Runs your javascript code whether your compiler likes it or not. <a href="https://t.co/qQzc7r7j">https://t.co/qQzc7r7j</a> via <a href="http://twitter.com/newsycombinator">@newsycombinator</a>

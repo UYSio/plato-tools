@@ -1,0 +1,1 @@
+Emacs+ensime+EC2 or something like this for a Cloud IDE?  <a href="https://t.co/jdSWIRbgJ1">https://t.co/jdSWIRbgJ1</a> #scala

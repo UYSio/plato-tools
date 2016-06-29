@@ -1,0 +1,1 @@
+#computergameshows val person = People.belongsTo(line);

@@ -5,6 +5,7 @@
 ;; TODO require * ?
 (require "by-mime-type/image.rkt")
 (require "by-file-extension/markdown/handler.rkt")
+(require "by-file-extension/text/handler.rkt")
 
 (define mime-type-lookup
   (hash
@@ -12,4 +13,5 @@
 
 (define file-extension-lookup
   (hash
-   "md" handle-markdown))
+   "md" handle-markdown
+   "txt" handle-text))

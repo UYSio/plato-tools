@@ -1,0 +1,1 @@
+Good #PostgresQL refresher on indexes, courtesy of <a href="http://twitter.com/thoughtbot">@thoughtbot</a> <a href="https://t.co/8RVWOQFL">https://t.co/8RVWOQFL</a>
