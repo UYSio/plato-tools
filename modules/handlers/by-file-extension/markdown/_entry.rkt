@@ -9,9 +9,11 @@
 (define (handle-entry params front-matter)
   (let* ([output-entry (p-output-entry params)]
          [asset-rel-file (p-asset-rel-file params)]
+         [out-file (p-out-file params)]
          [output-landing-pages (p-output-landing-pages params)]
-         [output-landing-page (format "~a/~a" output-landing-pages "index.html")]
+         [output-landing-page (format "~a/~a" output-landing-pages out-file)]
          [safe (path->dothtml asset-rel-file)])
+
     (display-to-file
      (string-append
       "<div class='element__item wwlf' data-category='wwlf'>"

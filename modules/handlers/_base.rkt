@@ -17,14 +17,15 @@
     (string-append (string-replace path-str "/" "-") ".html")))
 
 (define (handle-landing-page params html)
-  (let ([output-landing-pages (p-output-landing-pages params)])
+  (let ([output-landing-pages (p-output-landing-pages params)]
+        [out-file (p-out-file params)])
     (display-to-file
      (string-append
       (file->string "static/templates/markdown/header.html")
       "<!-- modules/handlers/by-mime-type/image/_landingpage.rkt -->"
       html
       (file->string "static/templates/markdown/footer.html"))
-     (format "~a/~a" output-landing-pages "index.html")
+     (format "~a/~a" output-landing-pages out-file)
      #:mode 'text
      #:exists 'replace)))
 

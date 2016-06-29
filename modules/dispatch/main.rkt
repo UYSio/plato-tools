@@ -4,7 +4,8 @@
 (require "_date.rkt"
          "../handlers/_init.rkt"
          "../handlers/_params.rkt"
-         "../mime/util.rkt")
+         "../mime/util.rkt"
+         "_util.rkt")
 
 (provide dispatch-asset)
 
@@ -52,6 +53,7 @@
              [subtype (mime-type-subtype mime-type)]
              [asset-rel-file (find-relative-path asset-root asset)]
              [the-date (guess-date asset-rel-file)]
+             [out-file (dispatch-util-htmlfile asset-rel-file)]
              [params (p
                       output-root
                       asset-rel-file
@@ -59,7 +61,8 @@
                       asset
                       asset-output-landing-pages
                       output-entries
-                      the-date)]
+                      the-date
+                      out-file)]
              [ext (bytes->string/utf-8 (filename-extension asset))])
         (cond
           [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
