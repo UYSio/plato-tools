@@ -30,7 +30,7 @@
     ;; entry
     (display-to-file
      (string-append
-      "<div class='element__item image' data-category='image'><a href='"
+      "<div class='el image' data-category='image'><a href='"
       (strip-outpath local-asset params)
       "'><img src='"
       (strip-outpath thumb params)

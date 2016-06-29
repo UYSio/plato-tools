@@ -3,7 +3,7 @@
 $( document ).ready( function() {
     // init Isotope
     var $container = $('.elements').isotope({
-        itemSelector: '.element__item',
+        itemSelector: '.el',
         masonry: {
             columnWidth: '.element__column',
             gutter: '.element__gutter'

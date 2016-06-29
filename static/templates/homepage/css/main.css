@@ -7,79 +7,79 @@ body {
 body {
     background: #fff
 }
-.element__item.intro {
+.el.intro {
     background: #A4E6D1;
 }
-.element__item.wwlf {
+.el.wwlf {
     background: rgba(166, 205, 217, 0.42);
 }
 
-.element__item.wwlf .tags {
+.el.wwlf .tags {
     color: #8c6764;
 }
 
-.element__item.wwlf p {
+.el.wwlf p {
     padding-top: 10px;
 }
 
-.element__item.wwlf .category {
+.el.wwlf .category {
     display: none;
 }
 
-.element__item.wwlf .date {
+.el.wwlf .date {
     color: #c8b3b2;
     position: absolute;
     right: 10px;
     bottom: 10px;
 }
 
-.element__item.wwsf {
+.el.wwsf {
     background: #FBFFDD
 }
-.element__item.wwsf p {
+.el.wwsf p {
     padding-top: 10px;
 }
-.element__item.wwlf .content {
+.el.wwlf .content {
     /* nothing yet */
 }
-.element__item.wwsf .date {
+.el.wwsf .date {
     color: #c8b3b2;
     position: absolute;
     right: 10px;
     bottom: 10px;
 }
 
-.element__item.project {
+.el.project {
     background: #8C6764
 }
 
-.element__item.outbound {
+.el.outbound {
     background: #aca6d9
 }
 
-.element__item.voicememo {
+.el.voicememo {
     background: #e1ddff
 }
 
-.element__item.review {
+.el.review {
     background: #64898c
 }
 
-.element__item.quote {
+.el.quote {
     background: silver
 }
 
-.element__item.travel {
+.el.travel {
     background: #eee
 }
 
-.element__item.doodle,
-.element__item.image,
-.element__item.video {
+.el.doodle,
+.el.image,
+.el.video {
     background: #aaa;
 }
 
-.element__item.image img {
+.el.image img {
     /* imgs are usually wider than they are high, so specify width first. */
     max-width: 200px;
     width: 100%;
@@ -92,7 +92,7 @@ body {
     margin: auto;
 }
 
-.element__item.title {
+.el.title {
     position: absolute;
     left: 10px;
     top: 60px;
@@ -102,7 +102,7 @@ body {
     font-weight: 400
 }
 
-.element__item.description {
+.el.description {
     position: absolute;
     left: 10px;
     top: 0;
@@ -111,18 +111,18 @@ body {
     color: #fff
 }
 
-.element__item.date,
-.element__item.icon {
+.el.date,
+.el.icon {
     position: absolute;
     top: 76px;
     font-size: 12px
 }
 
-.element__item.date {
+.el.date {
     left: 10px
 }
 
-.element__item.icon {
+.el.icon {
     right: 30px
 }
 
@@ -145,18 +145,18 @@ body {
     padding-left: 10px
 }
 
-.element__item {
+.el {
     width: 200px;
     height: 200px;
     margin-top: 10px;
     padding: 10px
 }
 
-.element__item--width2 {
+.elw2 {
     width: 410px
 }
 
-.element__item--height2 {
+.elh2 {
     height: 410px
 }
 
@@ -168,7 +168,7 @@ body {
     width: 200px
 }
 
-.element__item>* {
+.el>* {
     margin: 0;
     padding: 0
 }

@@ -16,7 +16,7 @@
 
     (display-to-file
      (string-append
-      "<div class='element__item wwsf' data-category='wwsf'>"
+      "<div class='el wwsf' data-category='wwsf'>"
       "<p class='content'>" content "</p>"
       "<p class='date'>" (p-the-date params) "</p>"
       "</div>")

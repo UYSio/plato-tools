@@ -16,7 +16,7 @@
 
     (display-to-file
      (string-append
-      "<div class='element__item wwlf' data-category='wwlf'>"
+      "<div class='el wwlf' data-category='wwlf'>"
       "<h3 class='title'>"(hash-ref front-matter "title")
       "<a href='" (strip-outpath output-landing-page params) "'>🔗</a></h3>"
       "<p class='description'>" (hash-ref front-matter "description") "</p>"
