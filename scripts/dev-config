@@ -3,5 +3,6 @@ export LOC1=$EXAMPLES/over-here
 export LOC2=$EXAMPLES/over-there
 export LOC3=$EXAMPLES/my-website
 export LOC4=$EXAMPLES/chirps
+export LOC5=$EXAMPLES/photograms
 export OUT_ROOT=/tmp/plato/out
 export OUT_ENTRIES=/tmp/plato/entries 

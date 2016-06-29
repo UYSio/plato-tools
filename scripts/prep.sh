@@ -20,6 +20,7 @@ fresh() {
 	perl -pi -e 's/LOC2/$ENV{LOC2}/g' $CONF/config.rkt
 	perl -pi -e 's/LOC3/$ENV{LOC3}/g' $CONF/config.rkt
 	perl -pi -e 's/LOC4/$ENV{LOC4}/g' $CONF/config.rkt
+	perl -pi -e 's/LOC5/$ENV{LOC5}/g' $CONF/config.rkt
 	perl -pi -e 's/OUT_ROOT/$ENV{OUT_ROOT}/g' $CONF/config.rkt
 	perl -pi -e 's/OUT_ENTRIES/$ENV{OUT_ENTRIES}/g' $CONF/config.rkt
 }
