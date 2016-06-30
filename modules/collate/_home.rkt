@@ -5,7 +5,7 @@
 
 (provide refresh-home)
 
-(define PAGE_SIZE 22)
+(define PAGE_SIZE 21)
 
 (define (split-by lst n)
   (if (not (empty? lst))
