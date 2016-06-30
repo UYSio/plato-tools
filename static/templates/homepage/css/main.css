@@ -8,8 +8,17 @@ body {
 body {
     background: #fff
 }
-.el.intro {
+
+.el.x {
     background: #A4E6D1;
+}
+.el.nav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 .el.wwlf {
     background: rgba(166, 205, 217, 0.42);
@@ -37,12 +46,15 @@ body {
 .el.wwsf {
     background: #FBFFDD
 }
+
 .el.wwsf p {
     padding-top: 10px;
 }
+
 .el.wwlf .content {
     /* nothing yet */
 }
+
 .el.wwsf .date {
     color: #c8b3b2;
     position: absolute;
@@ -177,14 +189,15 @@ body {
 /* pages */
 
 blockquote {
-  border-left: 5px solid #aca6d9;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+    border-left: 5px solid #aca6d9;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
 }
+
 blockquote:before {
-  color: #aca6d9;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+    color: #aca6d9;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
 }

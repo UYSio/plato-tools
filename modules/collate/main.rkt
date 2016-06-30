@@ -14,7 +14,6 @@ cfg.output-entries into a home listing page.
 (define (collate cfg)
   (printf "\n[2] Collating...\n")
   (let* ([output-root (dict-ref cfg 'output-root)]
-         [output-home-page (format "~a/~a" output-root "index.html")]
          [output-entries (dict-ref cfg 'output-entries)])
-    (refresh-home output-home-page output-entries)
+    (refresh-home output-root output-entries)
     (refresh-static output-root)))
