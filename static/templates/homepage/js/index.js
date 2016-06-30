@@ -2,11 +2,11 @@
 
 $( document ).ready( function() {
     // init Isotope
-    var $container = $('.elements').isotope({
+    var $container = $('.els').isotope({
         itemSelector: '.el',
         masonry: {
-            columnWidth: '.element__column',
-            gutter: '.element__gutter'
+            columnWidth: '.elcoll',
+            gutter: '.elgutter'
         },
         getSortData: {
             name: '.name',

@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-.elements,
+.els,
 body {
     background: #fff
 }
@@ -134,13 +134,13 @@ body {
     box-sizing: border-box
 }
 
-.elements:after {
+.els:after {
     content: "";
     display: table;
     clear: both
 }
 
-.elements {
+.els {
     width: 100%;
     padding-left: 10px
 }
@@ -160,11 +160,11 @@ body {
     height: 410px
 }
 
-.element__gutter {
+.elgutter {
     width: 10px
 }
 
-.element__column {
+.elcoll {
     width: 200px
 }
 
