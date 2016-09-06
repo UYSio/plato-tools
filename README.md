@@ -41,3 +41,7 @@ A handler will do this:
 An "entry" is written for each asset, into `out-entries`.
 
 The `collate` module then writes all those entries out to the home page.
+
+# TODO
+
+- AWS lambda? http://www.dbrunner.net/blog/2015/08/27/running-racket-on-aws-lambda/
