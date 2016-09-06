@@ -25,14 +25,16 @@ For each content location:
   (printf "\n[1] Scanning...\n")
   ;; for each sub-directory of input-root
   (for ([input-root (dict-ref cfg 'input-roots)])
-    (for ([directory (in-directory input-root)])
-      (if (directory-exists? directory)
-          (let* ([files (sequence-filter file-exists?
-                                         (in-directory directory (lambda (x) #f)))]
-                 [bundle (sequence->list files)])
-            (unless (or (empty? bundle) (skip? cfg bundle))
-              (printf "\n\033[0;33m₽lato\t\033[0;32m~a\033[0m\n" bundle)
-              ; send to dispatcher the directory, and
-              ; the file bundle in it.
-              (dispatch-asset cfg input-root directory bundle)))
-          #f))))
+    (if (directory-exists? input-root)
+        (for ([directory (in-directory input-root)])
+          (if (directory-exists? directory)
+              (let* ([files (sequence-filter file-exists?
+                                             (in-directory directory (lambda (x) #f)))]
+                     [bundle (sequence->list files)])
+                (unless (or (empty? bundle) (skip? cfg bundle))
+                  (printf "\n\033[0;33m₽lato\t\033[0;32m~a\033[0m\n" bundle)
+                                        ; send to dispatcher the directory, and
+                                        ; the file bundle in it.
+                  (dispatch-asset cfg input-root directory bundle)))
+              #f))
+        (printf "\n\033[0;33m₽lato\t\033[0;31m404 ~a\033[0m\n" input-root))))
