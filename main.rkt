@@ -9,7 +9,7 @@ then sends it off to the scanner.
          racket/date
          "modules/scan.rkt"
          "modules/collate/main.rkt"
-         (file "~/.plato/config.rkt"))
+         (file "~/.config/plato/config.rkt"))
 
 (date-display-format 'iso-8601)
 
