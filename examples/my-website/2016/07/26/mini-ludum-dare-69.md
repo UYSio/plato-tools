@@ -55,6 +55,6 @@ Playtesting! I could scale the difficulty a bit better. Perhaps calibrating the 
 
 # Screenshots
 
-![Splash](/content/images/2016/11/splash.png)
+![Splash](splash.png)
 
-![Game](/content/images/2016/11/game.png)
+![Game](game.png)

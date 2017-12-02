@@ -5,4 +5,4 @@ tags: plato-image webcomic angrydog
 category: blog
 ---
 
-![angry dog](/content/images/2017/03/this_file_will_be_autodeleted_in_24hrs_1lTDQDFMbMI6LOC8zXiE2YA.jpg)
+![angry dog](this_file_will_be_autodeleted_in_24hrs_1lTDQDFMbMI6LOC8zXiE2YA.jpg)

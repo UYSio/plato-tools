@@ -18,5 +18,5 @@ Installing an HP PhotoSmart 5520 on Arch Linux.
 * Authenticate with your system login
 * Click through all the options
 
-![Printer setup screen](/content/images/2016/11/printadmin.png)
+![Printer setup screen](printadmin.png)
 

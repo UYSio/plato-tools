@@ -7,5 +7,5 @@ category: blog
 
 *"I do real work this way."*
 
-![laptopping](/content/images/2016/11/laptopping.png)
+![laptopping](laptopping.png)
 

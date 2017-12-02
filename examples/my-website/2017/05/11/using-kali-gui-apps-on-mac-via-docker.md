@@ -33,4 +33,4 @@ zaproxy
 
 Et voilà:
 
-![GUI FTW](/content/images/2017/05/kali-docker-mac-gui.png)
+![GUI FTW](kali-docker-mac-gui.png)

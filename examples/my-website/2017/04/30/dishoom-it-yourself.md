@@ -18,6 +18,6 @@ Dishoom makes a mean breakfast, and here's how you can do it yourself using a fe
 
 I haven't taken a photo of my food since I paid money for Hipstamatic photo filters, but here you go:
 
-![anglo-indian bacon butty](/content/images/2017/04/IMG_20170430_135037.jpg)
+![anglo-indian bacon butty](IMG_20170430_135037.jpg)
 
 

@@ -5,4 +5,4 @@ tags: plato-image life funny
 category: blog
 ---
 
-![living a life of porpoise](/content/images/2017/08/porpoise-txt.jpg)
+![living a life of porpoise](porpoise-txt.jpg)

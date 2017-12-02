@@ -5,7 +5,7 @@ tags: plato-image life
 category: blog
 ---
 
-![every open plan office I've ever worked in](/content/images/2017/07/noisy-office.png)
+![every open plan office I've ever worked in](noisy-office.png)
 
 As a developer, one sometimes need to get into "the zone". Other developers know this, and you all work quietly together.
 

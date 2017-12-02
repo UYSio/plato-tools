@@ -53,7 +53,7 @@ It started with a hacked Jekyll. Feeling the architecture too constrained, I mad
 
 It does feel and look like the *stream of consciousness* I always wanted:
 
-![stream of cons](/content/images/2016/12/stream-of-cons.png)
+![stream of cons](stream-of-cons.png)
 
 # Misc
 
@@ -73,4 +73,4 @@ Shut up and
 
 Merry Xmas and have a joyous new year.
 
-![merry Xmas and have a joyous new year](/content/images/2016/12/merry-1.png)
+![merry Xmas and have a joyous new year](merry-1.png)

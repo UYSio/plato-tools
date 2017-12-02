@@ -5,6 +5,6 @@ tags: plato-image funny
 category: blog
 ---
 
-![trumpet](/content/images/2017/08/both-trumpet-captioned.jpg)
+![trumpet](both-trumpet-captioned.jpg)
 
 Yes, I'm in a funny mood today.

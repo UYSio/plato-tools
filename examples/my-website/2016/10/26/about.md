@@ -22,7 +22,7 @@ All my other content are slowly-but-surely being migrated here from about 7 or 8
 I have a [professional website](http://uys.io) with more detail about the stuff I do to put bread on the table.
 
 
-![Juan Uys](/content/images/2016/12/suited-side.jpg)
+![Juan Uys](suited-side.jpg)
 
 # Why opyate?
 
