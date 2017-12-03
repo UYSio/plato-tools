@@ -1,5 +1,5 @@
 title: "The smallest thing"
-description: "Imported from Ghost using platos-ghost."
+description: " The smallest thing I can think of is not an..."
 layout: post
 tags: plato-quote life dream
 category: blog

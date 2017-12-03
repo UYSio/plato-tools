@@ -1,5 +1,5 @@
 title: "I'm in deep trouble"
-description: "Imported from Ghost using platos-ghost."
+description: "I'm a contractor programmer. I'm also an arti..."
 layout: post
 tags: plato-long life
 category: blog

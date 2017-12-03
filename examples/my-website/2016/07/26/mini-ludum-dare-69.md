@@ -1,5 +1,5 @@
 title: "Mini Ludum Dare 69"
-description: "Imported from Ghost using platos-ghost."
+description: "I started hacking on my mini-LD 69 entry](ht..."
 layout: post
 tags: plato-long tech games threejs webgl gamedev
 category: blog

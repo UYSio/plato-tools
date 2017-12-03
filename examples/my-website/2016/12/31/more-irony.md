@@ -1,5 +1,5 @@
 title: "More irony"
-description: "Imported from Ghost using platos-ghost."
+description: "This is not the ad I saw, but it was somethin..."
 layout: post
 tags: plato-long irony
 category: blog

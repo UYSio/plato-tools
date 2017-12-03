@@ -1,5 +1,5 @@
 title: "Week 2 of Structuring Machine Learning Projects"
-description: "Imported from Ghost using platos-ghost."
+description: "The objectives for this week are:..."
 layout: post
 tags: plato-long nn coursera deeplearning
 category: blog

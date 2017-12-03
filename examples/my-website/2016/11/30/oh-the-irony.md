@@ -1,5 +1,5 @@
 title: "Oh, the irony"
-description: "Imported from Ghost using platos-ghost."
+description: "Meditation app sends punter into a state of ..."
 layout: post
 tags: plato-long irony
 category: blog

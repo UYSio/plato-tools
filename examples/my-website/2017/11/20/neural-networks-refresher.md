@@ -1,5 +1,5 @@
 title: "Neural Networks refresher"
-description: "Imported from Ghost using platos-ghost."
+description: "I did a course](http://issc.uj.ac.za/issc/sc..."
 layout: post
 tags: plato-long nn coursera deeplearning
 category: blog

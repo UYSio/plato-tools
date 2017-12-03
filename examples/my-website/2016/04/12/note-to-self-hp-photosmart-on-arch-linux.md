@@ -1,5 +1,5 @@
 title: "Note to self - HP PhotoSmart on Arch Linux"
-description: "Imported from Ghost using platos-ghost."
+description: " Note to self..."
 layout: post
 tags: plato-long tech archlinux
 category: blog

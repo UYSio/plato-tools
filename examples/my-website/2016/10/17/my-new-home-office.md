@@ -1,5 +1,5 @@
 title: "My new home office"
-description: "Imported from Ghost using platos-ghost."
+description: "Due to a growing family, I got kicked out of ..."
 layout: post
 tags: plato-long homeoffice diy
 category: blog

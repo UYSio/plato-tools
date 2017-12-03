@@ -1,5 +1,5 @@
 title: "My deep reinforcement learning hardware, one year on"
-description: "Imported from Ghost using platos-ghost."
+description: "Behold, my deep reinforcement learning hardwa..."
 layout: post
 tags: plato-photo nn deeplearning life
 category: blog

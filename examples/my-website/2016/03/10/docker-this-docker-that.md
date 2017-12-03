@@ -1,5 +1,5 @@
 title: "Docker this, Docker that."
-description: "Imported from Ghost using platos-ghost."
+description: "Ever since Ben Firshman](https://fir.sh/) in..."
 layout: post
 tags: plato-long tech docker unity3d android
 category: blog

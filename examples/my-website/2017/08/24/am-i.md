@@ -1,5 +1,5 @@
 title: "Am I?"
-description: "Imported from Ghost using platos-ghost."
+description: "..."
 layout: post
 tags: plato-image life funny
 category: blog

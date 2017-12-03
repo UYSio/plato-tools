@@ -1,5 +1,5 @@
 title: "Using Kali GUI apps on Mac via Docker"
-description: "Imported from Ghost using platos-ghost."
+description: "Let's get the slow thing out of the way first..."
 layout: post
 tags: plato-long security kali tech
 category: blog

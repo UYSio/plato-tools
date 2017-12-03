@@ -1,5 +1,5 @@
 title: "Kaggle Cats and Dogs"
-description: "Imported from Ghost using platos-ghost."
+description: "..."
 layout: post
 tags: plato-short kaggle machinelearning neuralnets tech
 category: blog

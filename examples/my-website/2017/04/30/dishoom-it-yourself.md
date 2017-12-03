@@ -1,5 +1,5 @@
 title: "Dishoom It Yourself"
-description: "Imported from Ghost using platos-ghost."
+description: "Dishoom makes a mean breakfast, and here's ho..."
 layout: post
 tags: plato-photo dishoom food
 category: blog

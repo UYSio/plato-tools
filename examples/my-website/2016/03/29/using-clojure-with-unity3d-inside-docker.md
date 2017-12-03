@@ -1,5 +1,5 @@
 title: "Using Clojure with Unity3D inside Docker"
-description: "Imported from Ghost using platos-ghost."
+description: "I braced myself for a thorough hack to get Cl..."
 layout: post
 tags: plato-long tech unity3d clojure docker gamedev
 category: blog

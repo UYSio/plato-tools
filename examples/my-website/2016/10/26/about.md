@@ -1,5 +1,5 @@
 title: "About"
-description: "Imported from Ghost using platos-ghost."
+description: "Hi, I'm Juan, and I live next to a park in Lo..."
 layout: post
 tags: 
 category: blog

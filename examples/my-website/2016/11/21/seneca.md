@@ -1,5 +1,5 @@
 title: "Seneca"
-description: "Imported from Ghost using platos-ghost."
+description: " He who suffers before it is necessary suffe..."
 layout: post
 tags: plato-quote life
 category: blog

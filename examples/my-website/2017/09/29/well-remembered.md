@@ -1,5 +1,5 @@
 title: "Well remembered!"
-description: "Imported from Ghost using platos-ghost."
+description: "Yes, this is just the way my brain works:..."
 layout: post
 tags: plato-image funny
 category: blog

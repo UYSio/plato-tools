@@ -1,5 +1,5 @@
 title: "Trumpet"
-description: "Imported from Ghost using platos-ghost."
+description: "trumpet](both-trump..."
 layout: post
 tags: plato-image funny
 category: blog

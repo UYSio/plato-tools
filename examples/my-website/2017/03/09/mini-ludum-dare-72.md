@@ -1,5 +1,5 @@
 title: "Mini Ludum Dare 72"
-description: "Imported from Ghost using platos-ghost."
+description: "I participated](https://opyate.github.io/min..."
 layout: post
 tags: plato-long gamedev quil processing webaudio clojurescript minild
 category: blog

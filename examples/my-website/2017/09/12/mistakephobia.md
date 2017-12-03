@@ -1,5 +1,5 @@
 title: "Mistakephobia"
-description: "Imported from Ghost using platos-ghost."
+description: " I believe that our society's "mistakephobia..."
 layout: post
 tags: plato-quote school life education machinelearning
 category: blog

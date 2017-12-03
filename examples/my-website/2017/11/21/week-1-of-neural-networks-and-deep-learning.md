@@ -1,5 +1,5 @@
 title: "Week 1 of Neural Networks and Deep Learning"
-description: "Imported from Ghost using platos-ghost."
+description: " Introduction to Deep Learning..."
 layout: post
 tags: plato-long nn coursera deeplearning
 category: blog

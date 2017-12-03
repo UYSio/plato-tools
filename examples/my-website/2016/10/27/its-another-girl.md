@@ -1,5 +1,5 @@
 title: "It's (another) girl"
-description: "Imported from Ghost using platos-ghost."
+description: "After much anticipation](https://www.youtube..."
 layout: post
 tags: plato-photo life
 category: blog

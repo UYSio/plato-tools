@@ -1,5 +1,5 @@
 title: "Cover letter to recruiter this morning"
-description: "Imported from Ghost using platos-ghost."
+description: " Please imagine I wrote a beautiful cover le..."
 layout: post
 tags: plato-quote funny
 category: blog

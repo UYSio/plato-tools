@@ -1,5 +1,5 @@
 title: "Do no harm"
-description: "Imported from Ghost using platos-ghost."
+description: "I've always wondered if there could be a simp..."
 layout: post
 tags: plato-long life
 category: blog

@@ -1,5 +1,5 @@
 title: "The human brain"
-description: "Imported from Ghost using platos-ghost."
+description: " If the human brain were so simple that we c..."
 layout: post
 tags: plato-quote brain
 category: blog

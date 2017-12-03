@@ -1,5 +1,5 @@
 title: "Before we forget..."
-description: "Imported from Ghost using platos-ghost."
+description: "We renovated our first home](/tag/pits-to-pa..."
 layout: post
 tags: plato-long pits-to-palace
 category: blog

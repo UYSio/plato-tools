@@ -1,5 +1,5 @@
 title: "Ajax: when was your first time? ™"
-description: "Imported from Ghost using platos-ghost."
+description: "I reminisced with some friends about technolo..."
 layout: post
 tags: plato-long tech ajax dinosaur
 category: blog

@@ -1,5 +1,5 @@
 title: "The purpose of life isn't to be happy"
-description: "Imported from Ghost using platos-ghost."
+description: "Idea:** Happiness, ​as ​associated ​with ​p..."
 layout: post
 tags: plato-long life
 category: blog

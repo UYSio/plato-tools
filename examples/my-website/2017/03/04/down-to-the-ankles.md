@@ -1,5 +1,5 @@
 title: "Down to the ankles"
-description: "Imported from Ghost using platos-ghost."
+description: "..."
 layout: post
 tags: plato-image webcomic angrydog
 category: blog

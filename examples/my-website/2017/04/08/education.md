@@ -1,5 +1,5 @@
 title: "Education"
-description: "Imported from Ghost using platos-ghost."
+description: " Education is, quite simply, peace-building ..."
 layout: post
 tags: plato-quote education
 category: blog

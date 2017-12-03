@@ -1,5 +1,5 @@
 title: "The Mexican fisherman"
-description: "Imported from Ghost using platos-ghost."
+description: "An American investment banker was at the pier..."
 layout: post
 tags: plato-long life
 category: blog

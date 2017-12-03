@@ -1,5 +1,5 @@
 title: "Simplicity"
-description: "Imported from Ghost using platos-ghost."
+description: " Out of all virtues simplicity is my most fa..."
 layout: post
 tags: plato-quote essentialism
 category: blog

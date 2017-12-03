@@ -1,5 +1,5 @@
 title: "Grand Theft Life"
-description: "Imported from Ghost using platos-ghost."
+description: " Because the most important thing the chef k..."
 layout: post
 tags: plato-quote life failure
 category: blog

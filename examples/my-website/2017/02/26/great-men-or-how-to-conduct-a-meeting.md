@@ -1,5 +1,5 @@
 title: "Great Men, or How To Conduct A Meeting"
-description: "Imported from Ghost using platos-ghost."
+description: "Richard Feynman remembers a particular meetin..."
 layout: post
 tags: plato-video meetings work
 category: blog

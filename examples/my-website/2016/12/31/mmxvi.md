@@ -1,5 +1,5 @@
 title: "MMXVI"
-description: "Imported from Ghost using platos-ghost."
+description: "Right, let's see if I can whip up a quick rev..."
 layout: post
 tags: plato-long life 2016 gamedev
 category: blog

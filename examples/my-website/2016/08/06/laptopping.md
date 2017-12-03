@@ -1,5 +1,5 @@
 title: "Laptopping"
-description: "Imported from Ghost using platos-ghost."
+description: "I do real work this way."*..."
 layout: post
 tags: plato-image drawing
 category: blog
