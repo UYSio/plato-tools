@@ -9,9 +9,6 @@ body {
     background: #fff
 }
 
-.el.x {
-    background: #A4E6D1;
-}
 .el.nav {
     display: -webkit-flex;
     display: flex;
@@ -19,6 +16,7 @@ body {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
+    background: yellow;
 }
 .el.wwlf {
     background: rgba(166, 205, 217, 0.42);

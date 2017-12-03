@@ -46,7 +46,7 @@
 (define (make-link page id)
   (display-to-file
    (string-append
-    "<div class='el x nav' data-category='nav'>"
+    "<div class='el nav' data-category='nav'>"
     "<a href='"
     id
     "'>NEXT</a>"
