@@ -1,5 +1,5 @@
 title: "Do no harm"
-description: "I've always wondered if there could be a simp..."
+description: "..."
 layout: post
 tags: plato-long life
 category: blog

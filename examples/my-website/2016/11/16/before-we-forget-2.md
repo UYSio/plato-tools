@@ -1,5 +1,5 @@
 title: "Before we forget..."
-description: "We renovated our first home](/tag/pits-to-pa..."
+description: "We renovated our first hometagpitstopa..."
 layout: post
 tags: plato-long pits-to-palace
 category: blog

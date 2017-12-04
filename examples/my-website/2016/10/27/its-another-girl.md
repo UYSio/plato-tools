@@ -1,5 +1,5 @@
 title: "It's (another) girl"
-description: "After much anticipation](https://www.youtube..."
+description: "After much anticipation..."
 layout: post
 tags: plato-photo life
 category: blog

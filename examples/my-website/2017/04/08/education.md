@@ -1,5 +1,5 @@
 title: "Education"
-description: " Education is, quite simply, peace-building ..."
+description: "..."
 layout: post
 tags: plato-quote education
 category: blog

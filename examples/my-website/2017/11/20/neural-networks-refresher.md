@@ -1,5 +1,5 @@
 title: "Neural Networks refresher"
-description: "I did a course](http://issc.uj.ac.za/issc/sc..."
+description: "I did a course..."
 layout: post
 tags: plato-long nn coursera deeplearning
 category: blog

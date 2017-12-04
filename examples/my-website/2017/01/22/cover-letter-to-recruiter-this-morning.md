@@ -1,5 +1,5 @@
 title: "Cover letter to recruiter this morning"
-description: " Please imagine I wrote a beautiful cover le..."
+description: "..."
 layout: post
 tags: plato-quote funny
 category: blog

@@ -1,5 +1,5 @@
 title: "Laptopping"
-description: "I do real work this way."*..."
+description: "..."
 layout: post
 tags: plato-image drawing
 category: blog

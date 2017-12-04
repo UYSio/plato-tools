@@ -1,5 +1,5 @@
 title: "Simplicity"
-description: " Out of all virtues simplicity is my most fa..."
+description: "..."
 layout: post
 tags: plato-quote essentialism
 category: blog

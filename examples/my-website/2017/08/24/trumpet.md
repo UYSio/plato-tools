@@ -1,5 +1,5 @@
 title: "Trumpet"
-description: "trumpet](both-trump..."
+description: "..."
 layout: post
 tags: plato-image funny
 category: blog

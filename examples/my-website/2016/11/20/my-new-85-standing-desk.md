@@ -1,5 +1,5 @@
 title: "My new £85 standing desk"
-description: "I recently converted a new home office](/201..."
+description: "I recently converted a new home office201..."
 layout: post
 tags: plato-long diy homeoffice
 category: blog

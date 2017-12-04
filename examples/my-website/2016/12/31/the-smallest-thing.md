@@ -1,5 +1,5 @@
 title: "The smallest thing"
-description: " The smallest thing I can think of is not an..."
+description: "..."
 layout: post
 tags: plato-quote life dream
 category: blog

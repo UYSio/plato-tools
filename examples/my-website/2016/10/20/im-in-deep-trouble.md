@@ -1,5 +1,5 @@
 title: "I'm in deep trouble"
-description: "I'm a contractor programmer. I'm also an arti..."
+description: "..."
 layout: post
 tags: plato-long life
 category: blog

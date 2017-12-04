@@ -1,5 +1,5 @@
 title: "Dishoom It Yourself"
-description: "Dishoom makes a mean breakfast, and here's ho..."
+description: "..."
 layout: post
 tags: plato-photo dishoom food
 category: blog

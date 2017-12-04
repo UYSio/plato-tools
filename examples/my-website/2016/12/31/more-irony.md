@@ -1,5 +1,5 @@
 title: "More irony"
-description: "This is not the ad I saw, but it was somethin..."
+description: "..."
 layout: post
 tags: plato-long irony
 category: blog

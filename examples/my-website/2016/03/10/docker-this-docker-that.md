@@ -1,5 +1,5 @@
 title: "Docker this, Docker that."
-description: "Ever since Ben Firshman](https://fir.sh/) in..."
+description: "Ever since Ben Firshman..."
 layout: post
 tags: plato-long tech docker unity3d android
 category: blog

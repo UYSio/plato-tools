@@ -1,5 +1,5 @@
 title: "Mistakephobia"
-description: " I believe that our society's "mistakephobia..."
+description: " I believe that our society's mistakephobia..."
 layout: post
 tags: plato-quote school life education machinelearning
 category: blog

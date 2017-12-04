@@ -1,5 +1,5 @@
 title: "Well remembered!"
-description: "Yes, this is just the way my brain works:..."
+description: "..."
 layout: post
 tags: plato-image funny
 category: blog

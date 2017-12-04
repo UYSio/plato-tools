@@ -1,5 +1,5 @@
 title: "Seneca"
-description: " He who suffers before it is necessary suffe..."
+description: "..."
 layout: post
 tags: plato-quote life
 category: blog
