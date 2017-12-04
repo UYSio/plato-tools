@@ -5,7 +5,10 @@
          "../handlers/_init.rkt"
          "../handlers/_params.rkt"
          "../mime/util.rkt"
-         "_util.rkt")
+         "_util.rkt"
+         "_detect.rkt")
+
+(require "../handlers/just-copy/_init.rkt")
 
 (provide dispatch-asset)
 
@@ -46,7 +49,8 @@
          [output-root (dict-ref cfg 'output-root)]
          [output-landing-pages (string-append output-root "/pages")]
          [asset-rel-dir (find-relative-path asset-root asset-dir)]
-         [asset-output-landing-pages (mkdir output-landing-pages asset-rel-dir)])
+         [asset-output-landing-pages (mkdir output-landing-pages asset-rel-dir)]
+         [main-content (detect-main assets)])
     (for ([asset assets])
       (let* ([mime-type (detect-mime-type asset)]
              [type (mime-type-type mime-type)]
@@ -64,7 +68,10 @@
                       the-date
                       out-file)]
              [ext (bytes->string/utf-8 (filename-extension asset))])
-        (cond
-          [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
-          [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
-          [else (printf "\tNo handler for mime-type ~a\n" mime-type)])))))
+        (if (or (equal? "" main-content) (equal? main-content asset))
+            (cond
+              [(hash-has-key? mime-type-lookup type) ((hash-ref mime-type-lookup type) params)]
+              [(hash-has-key? file-extension-lookup ext) ((hash-ref file-extension-lookup ext) params)]
+              [else (printf "\tNo handler for mime-type ~a\n" mime-type)])
+            (just-copy params))
+        ))))
