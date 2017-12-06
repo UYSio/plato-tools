@@ -28,3 +28,6 @@ clean:
 
 run:
 	@racket main.rkt
+
+publish:
+	aws s3 cp --recursive /tmp/plato/out s3://opyate.com
